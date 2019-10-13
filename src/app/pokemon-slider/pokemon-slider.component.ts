@@ -12,6 +12,7 @@ export class PokemonSliderComponent implements OnInit {
   @Output() OnChange: EventEmitter<any> =  new EventEmitter<any>();
   color = 'primary';
 
+
   constructor() { }
 
   ngOnInit() {
