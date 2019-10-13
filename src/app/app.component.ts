@@ -30,7 +30,7 @@ export class AppComponent {
   minIV = 100;
   maxIV = 100;
   get iv() {
-    if (this.minIV === this.maxIV) {
+    if (this.minIV === 100 && this.maxIV === 100) {
       return 'iv' + this.minIV;
     } else {
       return 'iv' + this.minIV + ' maxiv' + this.maxIV;
