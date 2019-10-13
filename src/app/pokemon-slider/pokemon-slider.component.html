@@ -2,7 +2,8 @@
     <mat-card-subtitle class="pokemonTitle">{{name}}</mat-card-subtitle>
             <img mat-card-avatar src="assets/images/{{image}}.png" />
     <mat-card-actions>
-        <mat-slide-toggle [color]="color" (change)="toggle($event)"></mat-slide-toggle> 
+        <mat-slide-toggle *ngIf="!controlChange" [color]="color" (change)="toggle($event)"></mat-slide-toggle> 
+        <mat-checkbox *ngIf="controlChange" [color]="color" labelPosition='before' (change)="toggle($event)">Select</mat-checkbox>
     </mat-card-actions>
 </mat-card>
 

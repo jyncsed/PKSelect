@@ -7,18 +7,18 @@ import { constructor } from 'q';
   styleUrls: ['./pokemon-slider.component.scss']
 })
 export class PokemonSliderComponent implements OnInit {
+
+
+  constructor() { }
   @Input() name: string;
   @Input() image: string;
   @Output() OnChange: EventEmitter<any> =  new EventEmitter<any>();
   color = 'primary';
-
-
-  constructor() { }
+  controlChange = (window.innerWidth <= 800);
 
   ngOnInit() {
       console.log(name);
     }
-
   toggle(event) {
     this.OnChange.emit({checked: event.source.checked, name: this.name});
     }
