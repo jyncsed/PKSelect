@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
+import { CoreModule, SwitchModule } from 'truly-ui'; // CoreModule
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,10 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    CoreModule.forRoot({theme: 'deeppurple'}), // Configurations
+    SwitchModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

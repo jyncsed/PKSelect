@@ -818,7 +818,7 @@ export class AppComponent {
   get formattedPokemon() {
     return JSON.stringify(this.selectedPokemon);
   }
-  gridRowHeight = '10:1';
+  gridRowHeight = '150px';
   gridColumns = '3';
   minIV = 100;
   maxIV = 100;

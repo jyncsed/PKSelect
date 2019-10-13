@@ -19,7 +19,7 @@
 </form>
 <hr>
 <mat-tab-group>
-    <mat-tab label="Generation 1">
+    <mat-tab label="Generation 1" flex>
       <mat-grid-list [cols]="gridColumns" [rowHeight]="gridRowHeight">
         <span *ngFor="let item of pokemonGen1; let i = index">
             <mat-grid-tile> <app-pokemon-slider [name]="item.name" [image]="item.id" (OnChange)="toggle($event)"></app-pokemon-slider></mat-grid-tile>
@@ -29,7 +29,7 @@
     <mat-tab label="Generation 2">
         <mat-grid-list [cols]="gridColumns" [rowHeight]="gridRowHeight">
           <span *ngFor="let item of pokemonGen2; let i = index">
-              <mat-grid-tile> <app-pokemon-slider [name]="item.name" [image]="item.id" (OnChange)="toggle($event)"></app-pokemon-slider></mat-grid-tile>
+              <mat-grid-tile > <app-pokemon-slider [name]="item.name" [image]="item.id" (OnChange)="toggle($event)"></app-pokemon-slider></mat-grid-tile>
           </span>
         </mat-grid-list>
       </mat-tab>
