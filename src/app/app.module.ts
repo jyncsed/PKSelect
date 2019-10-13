@@ -10,11 +10,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
-import { CoreModule, SwitchModule } from 'truly-ui'; // CoreModule
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { PokemonGridListComponent } from './pokemon-grid-list/pokemon-grid-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonSliderComponent
+    PokemonSliderComponent,
+    PokemonGridListComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,8 +29,8 @@ import { CoreModule, SwitchModule } from 'truly-ui'; // CoreModule
     MatFormFieldModule,
     MatTabsModule,
     FormsModule,
-    CoreModule.forRoot({theme: 'deeppurple'}), // Configurations
-    SwitchModule
+    MatCardModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],

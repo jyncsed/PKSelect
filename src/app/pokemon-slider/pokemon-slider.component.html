@@ -1,5 +1,9 @@
+<mat-card class="card" >
+    <mat-card-subtitle class="pokemonTitle">{{name}}</mat-card-subtitle>
+            <img mat-card-avatar src="assets/images/{{image}}.png" />
+    <mat-card-actions>
+        <mat-slide-toggle [color]="color" (change)="toggle($event)"></mat-slide-toggle> 
+    </mat-card-actions>
+</mat-card>
 
- {{name}} <mat-slide-toggle [color]="color" (change)="toggle($event)"><img src="assets/images/{{image}}.png" height="42" width="42" />
-         
- </mat-slide-toggle> 
  

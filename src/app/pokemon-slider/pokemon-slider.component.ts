@@ -19,8 +19,7 @@ export class PokemonSliderComponent implements OnInit {
       console.log(name);
     }
 
-
   toggle(event) {
-    this.OnChange.emit({event, name: this.name});
+    this.OnChange.emit({checked: event.source.checked, name: this.name});
     }
 }

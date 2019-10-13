@@ -1,0 +1,7 @@
+<mat-grid-list [cols]="breakpoint" [rowHeight]="gridRowHeight" (window:resize)="onResize($event)">
+    <span *ngFor="let item of pokemon; let i = index">
+        <mat-grid-tile> 
+            <app-pokemon-slider [name]="item.name" [image]="item.id" (OnChange)="toggle($event)"></app-pokemon-slider>
+        </mat-grid-tile>
+    </span>
+</mat-grid-list>
