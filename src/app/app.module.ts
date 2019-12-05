@@ -7,7 +7,7 @@ import { PokemonListModule } from './pokemon-list/pokemon-list.module';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './shared/pages/about/about.component';
-
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { AboutComponent } from './shared/pages/about/about.component';
     BrowserModule,
     BrowserAnimationsModule,
     PokemonListModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
