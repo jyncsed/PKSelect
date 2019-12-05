@@ -8,12 +8,13 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './shared/pages/about/about.component';
 import { MatCardModule } from '@angular/material/card';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
     PokemonListModule,
     AppRoutingModule,
     MatCardModule,
+    ClipboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,18 +1,18 @@
 <h5>Command</h5>
 <div class="information">Copy and paste command once IV is set and pokemon are selected</div>
-<span class="command">!track
-    <span *ngFor="let item of selectedPokemon; let i = index">
-     {{item}} 
-    </span> {{iv}}
-</span>
+<span class="command">{{ command }}</span>
+<div> 
+<div class="command"> 
+    <button mat-raised-button color="primary" ngxClipboard [cbContent]="command"  >Copy Command</button>
+</div>
 <hr>
 <h5>IV Configuration</h5>
 <div class="information">Can only do one IV selection at a time for multiple pokemon. You cannot select multiple pokemon with different IV ranges. Each one that needs to have seperete IV's will need to be seperate commands.</div>
 <form class="iv">
-    <mat-form-field class="example-full-width">
+    <mat-form-field>
         <input matInput  type="number" max="100" min="0" color="color" placeholder="minIV" [(ngModel)]="minIV" name="minIV">
 </mat-form-field>
-<mat-form-field class="example-full-width">
+<mat-form-field>
     <input matInput  type="number" max="100" min="0" color="color" placeholder="maxIV" [(ngModel)]="maxIV" name="maxIV">
 </mat-form-field>
 </form>

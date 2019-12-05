@@ -24,14 +24,29 @@ export class PokemonComponent implements OnInit {
 
   minIV = 100;
   maxIV = 100;
- ngOnInit() {
+
+  command: string;
+
+  ngOnInit() {
+    this.buildCommand();
   }
+
   get iv() {
     if (this.minIV === 100 && this.maxIV === 100) {
       return 'iv' + this.minIV;
     } else {
       return 'iv' + this.minIV + ' maxiv' + this.maxIV;
     }
+  }
+
+  buildCommand() {
+    this.command = '!track';
+    this.selectedPokemon.forEach(
+      pokemon => {
+        this.command += ' ' + pokemon;
+      }
+    );
+    this.command += ' ' + this.iv;
   }
 
   toggle(event) {
@@ -43,5 +58,6 @@ export class PokemonComponent implements OnInit {
         this.selectedPokemon.splice(this.selectedPokemon.indexOf(pokemon), 1);
       }
     }
+    this.buildCommand();
   }
 }

@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+import { ClipboardModule } from 'ngx-clipboard';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatCardModule,
     MatProgressSpinnerModule,
     MatCheckboxModule,
+    MatButtonModule,
+    ClipboardModule,
   ]
 })
 export class PokemonListModule { }
