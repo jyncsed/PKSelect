@@ -14,6 +14,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ClipboardModule } from 'ngx-clipboard';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatProgressSpinnerModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatIconModule,
     ClipboardModule,
   ]
 })

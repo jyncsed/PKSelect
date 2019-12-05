@@ -1,5 +1,11 @@
+<mat-form-field class="example-form-field">
+    <input matInput type="text" placeholder="Search" [(ngModel)]="sarchFor">
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="sarchFor=''">
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>
 <mat-grid-list [cols]="breakpoint" [rowHeight]="gridRowHeight" (window:resize)="onResize($event)">
-        <mat-grid-tile *ngFor="let item of pokemon; let i = index"> 
-            <app-pokemon-slider [name]="item.name" [image]="item.id" (OnChange)="toggle($event)"></app-pokemon-slider>
-        </mat-grid-tile>
+    <mat-grid-tile *ngFor="let item of pokemon; let i = index"> 
+        <app-pokemon-slider [name]="item.name" [image]="item.id" (OnChange)="toggle($event)"></app-pokemon-slider>
+    </mat-grid-tile>
 </mat-grid-list>

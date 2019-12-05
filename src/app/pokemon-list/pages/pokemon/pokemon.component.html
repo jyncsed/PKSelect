@@ -1,6 +1,7 @@
-<h5>Command</h5>
+<div class="general">
+  <h5>Command</h5>
 <div class="information">Copy and paste command once IV is set and pokemon are selected</div>
-<span class="command">{{ command }}</span>
+<p class="command">{{ command }}</p>
 <div> 
 <div class="command"> 
     <button mat-raised-button color="primary" ngxClipboard [cbContent]="command"  >Copy Command</button>
@@ -44,3 +45,4 @@
         </ng-template>
     </mat-tab>
   </mat-tab-group>
+  </div>
