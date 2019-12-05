@@ -11,6 +11,10 @@ export class PokemonGridListComponent implements OnInit {
 
   searchFor: string;
   get pokemonFiltered() {
+    if (this.searchFor) {
+      const lowercaseQuery = this.searchFor.toLowerCase();
+      return this.pokemon.filter(item => item.name.toLowerCase().indexOf(this.searchFor) > -1);
+    }
     return this.pokemon;
   }
 
@@ -24,12 +28,7 @@ export class PokemonGridListComponent implements OnInit {
   onResize(event) { // to adjust to screen size
     this.breakpoint = (event.target.innerWidth <= 800) ? 3 : 10;
   }
-  createFilterForAnycharacters(searchFor) {
-    const lowercaseQuery = searchFor.toLowerCase();
-    return function filterFn(yourDataList) {
-        return (yourDataList.display.toLowerCase().indexOf(this.pokemon) !== -1);
-    };
-}
+
   toggle(event) {
     this.OnChange.emit({checked: event.checked, name: event.name});
   }
