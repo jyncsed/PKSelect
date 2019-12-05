@@ -19,18 +19,28 @@
 <hr>
 <mat-tab-group>
     <mat-tab label="Generation 1">
+        <ng-template matTabContent>
       <app-pokemon-grid-list [pokemon] = "pokemonGen1" (OnChange)="toggle($event)"></app-pokemon-grid-list>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Generation 2">
+              <ng-template matTabContent>
       <app-pokemon-grid-list [pokemon] = "pokemonGen2"></app-pokemon-grid-list>
+              </ng-template>
     </mat-tab>
     <mat-tab label="Generation 3">
+        <ng-template matTabContent>
       <app-pokemon-grid-list [pokemon] = "pokemonGen3"></app-pokemon-grid-list>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Generation 4">
+        <ng-template matTabContent>
       <app-pokemon-grid-list [pokemon] = "pokemonGen4"></app-pokemon-grid-list>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Generation 5">
+        <ng-template matTabContent>
       <app-pokemon-grid-list [pokemon] = "pokemonGen5"></app-pokemon-grid-list>
+        </ng-template>
     </mat-tab>
   </mat-tab-group>
