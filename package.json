@@ -1,7 +1,6 @@
 {
   "name": "pkselect",
-  "version": "1.0.7",
-  "build-date": "01/01/2000",
+  "version": "1.0.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
