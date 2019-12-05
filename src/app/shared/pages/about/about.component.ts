@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class AboutComponent implements OnInit {
 
   versionNumber = environment.version;
-
+  buildDate = environment.buildDate;
   constructor() { }
 
   ngOnInit() {

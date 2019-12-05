@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  version: 'DEV'
+  version: 'DEV',
+  buildDate: 'DEV Date 01/01/2000'
 };
 
 /*
