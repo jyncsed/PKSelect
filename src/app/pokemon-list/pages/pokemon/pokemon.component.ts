@@ -44,7 +44,7 @@ export class PokemonComponent implements OnInit {
         return 'iv' + this.minIV + ' maxiv' + this.maxIV;
       }
     } else {
-      return 'maxIV' + this.maxIV;
+      return 'iv' + this.maxIV;
     }
   }
 
