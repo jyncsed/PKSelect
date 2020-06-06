@@ -24,19 +24,38 @@ export class PokemonComponent implements OnInit {
 
   minIV = 100;
   maxIV = 100;
+  maxAtk = 15;
+  maxDef = 15;
+  maxSta = 15;
 
   command: string;
+
+  usePvPBuilder = false;
 
   ngOnInit() {
     this.buildCommand();
   }
 
   get iv() {
-    if (this.minIV === 100 && this.maxIV === 100) {
-      return 'iv' + this.minIV;
+    if (!this.usePvPBuilder) {
+      if (this.minIV === 100 && this.maxIV === 100) {
+        return 'iv' + this.minIV;
+      } else {
+        return 'iv' + this.minIV + ' maxiv' + this.maxIV;
+      }
     } else {
-      return 'iv' + this.minIV + ' maxiv' + this.maxIV;
+      return 'maxIV' + this.maxIV;
     }
+  }
+
+  get stats() {
+    if (this.usePvPBuilder) {
+      const attack = `maxAtk${this.maxAtk}`;
+      const defense = `maxAtk${this.maxDef}`;
+      const stanima = `maxAtk${this.maxSta}`;
+      return attack + ' ' + defense + ' ' + stanima;
+    }
+    return '';
   }
 
   buildCommand() {
@@ -46,7 +65,7 @@ export class PokemonComponent implements OnInit {
         this.command += ' ' + pokemon;
       }
     );
-    this.command += ' ' + this.iv;
+    this.command += ' ' + this.iv + ' ' + this.stats;
   }
 
   toggle(event) {
@@ -59,5 +78,25 @@ export class PokemonComponent implements OnInit {
       }
     }
     this.buildCommand();
+  }
+
+  ivValidation() {
+    if (this.minIV > this.maxIV) {
+      this.minIV = this.maxIV;
+    }
+
+    if (this.usePvPBuilder) {
+      const calculateIV = Math.round((this.maxSta + this.maxAtk + this.maxDef) / 45 * 100);
+      this.maxIV = calculateIV;
+    }
+    this.buildCommand();
+  }
+
+  toggleUsePvPBuilder(event) {
+    if (event.checked) {
+      this.usePvPBuilder = true;
+    } else {
+      this.usePvPBuilder = false;
+    }
   }
 }
