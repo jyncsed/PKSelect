@@ -12,14 +12,15 @@ export class PokemonSliderComponent implements OnInit {
   constructor() { }
   @Input() name: string;
   @Input() image: string;
-  @Output() OnChange: EventEmitter<any> =  new EventEmitter<any>();
+  @Input() checked: boolean;
+  @Output() OnChange: EventEmitter<any> = new EventEmitter<any>();
   color = 'primary';
   controlChange = (window.innerWidth <= 800);
 
   ngOnInit() {
-      console.log(name);
-    }
+    console.log(name);
+  }
   toggle(event) {
-    this.OnChange.emit({checked: event.source.checked, name: this.name});
-    }
+    this.OnChange.emit({ checked: event.source.checked, name: this.name });
+  }
 }

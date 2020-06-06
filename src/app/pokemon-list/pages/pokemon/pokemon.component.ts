@@ -31,6 +31,7 @@ export class PokemonComponent implements OnInit {
   command: string;
 
   usePvPBuilder = false;
+  selectedIndex = 0;
 
   ngOnInit() {
     this.buildCommand();

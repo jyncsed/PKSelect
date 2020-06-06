@@ -1,10 +1,11 @@
-<mat-card class="card" >
+<mat-card class="card">
     <mat-card-subtitle class="pokemonTitle">{{name}}</mat-card-subtitle>
-            <img mat-card-avatar src="assets/images/{{image}}.png" />
+    <img mat-card-avatar src="assets/images/{{image}}.png" />
     <mat-card-actions>
-        <mat-slide-toggle *ngIf="!controlChange" [color]="color" (change)="toggle($event)"></mat-slide-toggle> 
-        <mat-checkbox *ngIf="controlChange" [color]="color" labelPosition='before' (change)="toggle($event)">Select</mat-checkbox>
+        <mat-slide-toggle *ngIf="!controlChange" [color]="color"
+            (change)="toggle($event)" [(checked)]="checked"></mat-slide-toggle>
+        <mat-checkbox *ngIf="controlChange" [color]="color"
+            labelPosition='before' (change)="toggle($event)"
+            [(checked)]="checked">Select</mat-checkbox>
     </mat-card-actions>
 </mat-card>
-
- 

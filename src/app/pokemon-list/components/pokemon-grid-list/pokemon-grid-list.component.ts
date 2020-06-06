@@ -7,7 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PokemonGridListComponent implements OnInit {
   @Input() pokemon: any;
-  @Output() OnChange: EventEmitter<any> =  new EventEmitter<any>();
+  @Input() selectedPokemon = [];
+  @Output() OnChange: EventEmitter<any> = new EventEmitter<any>();
 
   searchFor: string;
   get pokemonFiltered() {
@@ -30,6 +31,10 @@ export class PokemonGridListComponent implements OnInit {
   }
 
   toggle(event) {
-    this.OnChange.emit({checked: event.checked, name: event.name});
+    this.OnChange.emit({ checked: event.checked, name: event.name });
+  }
+
+  checkSelected(checkPokemon) {
+    return this.selectedPokemon.includes(checkPokemon);
   }
 }
